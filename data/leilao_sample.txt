@@ -1,0 +1,45 @@
+Fundamentos de Redes de Computadores
+
+Projeto da Disciplina - 2026.1
+
+Temática: AuctionCIn - Sistema de Leilão Multi-Usuário
+!!O que está em vermelho não é negociável!!
+
+Neste projeto, a equipe desenvolverá um sistema de leilão onde múltiplos clientes podem
+disputar itens em tempo real. O projeto foca na implementação de confiabilidade sobre UDP
+e na gerência de estado no servidor.
+Serão postadas atividades no Google Classroom referentes a cada etapa do projeto. A
+equipe deve realizar todas as entregas para que a nota final (soma das 3 etapas) seja
+validada. Em cada etapa, deverá ser entregue através do Google Classroom uma pasta
+compactada com o repositório do projeto ou um link do github com uma pasta para cada
+entrega. A atividade deverá ser entregue por cada um dos membros da equipe, nesses
+termos.
+● Obs: Cada entrega deve conter, em sua pasta, um README.md exclusivo daquela
+entrega, com instruções de execução e eventuais observações necessárias e o
+nome dos integrantes. Comentem o código!
+
+A seguir, serão descritas as especificações e requisitos de cada uma das etapas:
+
+1. Primeira Etapa: Transmissão de arquivos com UDP
+Implementação de comunicação UDP utilizando a biblioteca socket na linguagem Python,
+com envio e devolução de arquivo (o arquivo deve ser enviado pelo cliente, armazenado no
+servidor e devolvido ao cliente), em pacotes de até 1024 bytes (buffer_size). Não é
+necessária a implementação de transferência confiável nessa etapa, o servidor armazena,
+renomeia (ex: adicionando um prefixo “leilao_”) e devolve os arquivos renomeados ao
+cliente para confirmar o recebimento. Prazo para primeira entrega: 28/04
+A implementação deverá ser realizada conforme os requisitos a seguir:
+● Nessa entrega, deve ser implementado o envio e devolução de arquivos, reforçando
+que o envio de strings não é suficiente. Sugerimos que testem o programa para ao
+menos dois tipos de arquivos, como por exemplo um .txt e uma imagem.
+● É necessário a alteração do nome do arquivo antes da devolução ao cliente para
+demonstrar o funcionamento correto do código.
+
+● É recomendável a divisão do cliente e servidor em arquivos (.py) diferentes, para a
+execução de funcionalidades específicas. Lembrar que essa modularização é
+importante dado a escalabilidade das próximas entregas.
+● Dica: É uma dúvida comum se mensagem é diferente de arquivo, ou se ambos
+podem ser enviados em um só pacote com buffer_size infinito. Nesse contexto, uma
+mensagem ou um arquivo são e devem ser considerados a mesma coisa, bits, e
+devem seguir o mesmo fluxo. O que muda é que arquivos ou mensagens maiores
+que o buffer_size (1024 bytes) devem ser fragmentados em pacotes e reconstruídos
+no receptor. Recomendamos utilizar file.read e file.write (Python).
