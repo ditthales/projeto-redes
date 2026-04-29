@@ -1,12 +1,11 @@
 # Primeira Entrega - UDP File Transfer
 
 ## Integrantes
-- Nome 1
-- Nome 2
-- Nome 3
+- Thales Vinicius Gomes Fraga
+- Michelly Emanuela da Silva
 
-## Visao geral
-Este projeto implementa transmissao de arquivos via UDP com pacotes de ate 1024 bytes. O cliente envia um arquivo para o servidor, o servidor armazena, renomeia com o prefixo "leilao_" e devolve o arquivo renomeado ao cliente.
+## Visão geral
+Este projeto implementa transmissão de arquivos via UDP com pacotes de até 1024 bytes. O cliente envia um arquivo para o servidor, o servidor armazena, renomeia com o prefixo "leilao_" e devolve o arquivo renomeado ao cliente.
 
 ## Estrutura
 - cliente.py: envia o arquivo e recebe o retorno
@@ -20,7 +19,7 @@ Este projeto implementa transmissao de arquivos via UDP com pacotes de ate 1024 
 2. Em outro terminal, execute o cliente:
    python3 cliente.py
 
-## Configuracao
+## Configuração
 - Em cliente.py, ajuste INPUT_PATH para o arquivo que deseja enviar.
 - O servidor escuta em 0.0.0.0:9000 e o cliente envia para 127.0.0.1:9000.
 
@@ -28,7 +27,7 @@ Este projeto implementa transmissao de arquivos via UDP com pacotes de ate 1024 
 - Enviar um arquivo .txt pequeno
 - Enviar uma imagem (.png ou .jpg)
 
-## Observacoes
+## Observações
 - O protocolo usa um header simples com nome e tamanho antes dos bytes do arquivo.
 - O tamanho maximo de cada pacote e 1024 bytes (BUFFER_SIZE).
 - Codigo comentado e modularizado conforme solicitado.
