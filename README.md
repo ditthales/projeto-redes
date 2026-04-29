@@ -10,8 +10,8 @@ Este projeto implementa transmissão de arquivos via UDP com pacotes de até 102
 ## Estrutura
 - client.py: envia o arquivo e recebe o retorno
 - server.py: recebe, armazena, renomeia e devolve
-- header_utils: cria e ler o header
-- project_global: seta as configurações globais do projeto
+- header_utils.py: cria e ler o header
+- project_global.py: seta as configurações globais do projeto
 - data/: pasta fixa para arquivos do servidor
 - client_out/: pasta para arquivos retornados ao cliente (criada automaticamente)
 
