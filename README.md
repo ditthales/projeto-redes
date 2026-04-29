@@ -21,7 +21,7 @@ Este projeto implementa transmissão de arquivos via UDP com pacotes de até 102
 
 ## Configuração
 - Em cliente.py, ajuste INPUT_PATH para o arquivo que deseja enviar.
-- O servidor escuta em 0.0.0.0:9000 e o cliente envia para 127.0.0.1:9000.
+- O servidor escuta em 127.0.0.1:9000 e o cliente envia para 127.0.0.1:9000.
 
 ## Testes recomendados
 - Enviar um arquivo .txt pequeno
